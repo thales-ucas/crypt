@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./utils";
+
+.digitforce {
+  h1 {
+    @include h1;
+  }
+  h2 {
+    @include h2;
+  }
+  h3 {
+    @include h3;
+  }
+  h4 {
+    @include h4;
+  }
+  p {
+    @include p;
+  }
+  em {
+    @include em;
+  }
+  a {
+    @include a;
+  }
+  button {
+    @include button;
+  }
+  time {
+    @include time;
+  }
+  ul {
+    li {
+      @include p;
+    }
+  }
+  input {
+    @include regular;
+  }
+  @include regular;
+}
+
+@include keyframes(fade-in) {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+html {
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: $font-family-default;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: #e0e2e6;
+  background: #c2c2cc;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: #e0e2e6;
+  border-radius: 10px;
+  background: #fff;
+}
+
+
+.text-ellipsis { // 文字省略
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

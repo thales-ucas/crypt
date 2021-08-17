@@ -1,0 +1,107 @@
+@import './variables';
+
+@mixin font-base {
+  line-height: normal;
+}
+
+@mixin h1 { // 板块/页面标题
+  font-family: $font-heavy;
+  font-size: $h1-font-size;
+  color: $h1-font-color;
+  font-weight: $font-weight-heavy;
+  @include font-base;
+}
+@mixin h2 { // 单个模块标题文字
+  font-family: $font-heavy;
+  font-size: $h2-font-size;
+  color: $h2-font-color;
+  font-weight: $font-weight-heavy;
+  @include font-base;
+}
+@mixin h3 { // 列表标题文字
+  font-family: $font-bold;
+  font-size: $h3-font-size;
+  color: $h3-font-color;
+  font-weight: $font-weight-bold;
+  @include font-base;
+}
+@mixin h4 { // 弹窗标题
+  font-family: $font-medium;
+  font-size: $h4-font-size;
+  color: $h4-font-color;
+  font-weight: $font-weight-medium;
+  @include font-base;
+}
+@mixin p { // 正文/列表内容/按钮文字
+  font-family: $font-regular;
+  font-size: $p-font-size;
+  color: $p-font-color;
+  font-weight: $font-weight-regular;
+  @include font-base;
+}
+@mixin em { // 正文/列表内容/按钮文字
+  font-family: $font-regular;
+  color: $em-font-color;
+}
+@mixin regular {
+  font-family: $font-regular;
+  font-size: $p-font-size;
+}
+@mixin a { // 链接
+  font-family: $font-regular;
+  font-size: $a-font-size;
+  color: $a-font-color;
+  font-weight: $font-weight-regular;
+}
+@mixin time { // 时间
+  font-family: $font-regular;
+  font-size: $time-font-size;
+  color: $time-font-color;
+  font-weight: $font-weight-regular;
+  @include font-base;
+}
+
+@mixin sub { // 辅助
+  font-family: $font-regular;
+  font-size: $sub-font-size;
+  color: $sub-font-color;
+  font-weight: $font-weight-regular;
+}
+@mixin button { // 按钮
+  font-family: $font-regular;
+  color: $button-font-color;
+  background-color: $button-bg-color;
+  border-radius: 3px;
+  border: none;
+}
+
+
+@mixin item {
+  background: $color-background;
+  border: $color-border;
+  border-radius: 4px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+@mixin item-status($content, $color:#FFF, $background:none) {
+  color: $color;
+  background-color: $background;
+  &::after {
+    content: $content;
+  }
+}
+
+@mixin keyframes($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin text-ellipsis($line) {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: #{$line}; /** 显示的行数 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
+}
