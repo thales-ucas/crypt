@@ -4,6 +4,7 @@ import styleImport from 'vite-plugin-style-import'
 import * as path from "path";
 
 export default defineConfig({
+  base: './',
   server: {
     port: 6002,
     cors: true
