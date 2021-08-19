@@ -3,33 +3,48 @@
 
 《哆啦A梦》有一集叫《保密笔》
 
-
-![./dora.jpg](./dora.jpg)
-
+<img src="./dora.jpg" width="100" />
 
 
 *野比大雄*给*源静香*写的信
 
 
-![./nobi.jpg](./nobi.jpg)
+<img src="./nobi.jpg" width="100" />
 
 
 在*刚田武*和*骨川小夫*看，什么都看不到
 
 
-![./latter.jpg](./latter.jpg)
+<img src="./latter.jpg" width="100" />
 
 
 但是静香可以看到信的内容
 
 
-![./shizi.jpg](./shizi.jpg)
+<img src="./shizi.jpg" width="100" />
 
 
 动画中的内容，现实中早已实现
 
 
 这个保密笔就是——**RSA**
+
+
+我们现在可以写一个```I love you!```
+<img src="./nobi.jpg" width="100" />
+
+
+然后用rsa加密成了别人看不懂的文字
+<img src="./latter.jpg" width="100" />
+
+
+```
+FId8qJJfvrX3mTx3ap2+wEdo1+V1zonxvhaYZM51ClJD8+B15LkwhDhMSEZ/sfLZ1i+SunHl8InsVQ31LoLvSw5oJ4w6GcJWlmMD9Ax/iClGxaZEZl4IRmadcz7duGYbv6hllCaxLqdRGHJVwmwkGv1umL13PmUeP2DWmE9wMAY=
+```
+
+
+别人就跟小夫一样什么也看不到，但是拥有rsa的人可以看到```I love you!```
+<img src="./result.jpg" width="100" />
 
 
 # RSA加密算法
@@ -81,14 +96,17 @@ https://thales-ucas.gitee.io/crypt/
 
 加密后的内容如下——
 ```
-JZ1Pt3H7i+2c16EilK5u1XCyGzTik+9X7F+fCEEgWCtJw2xUDoJuVglKd+8FPfv2MEwmlJbmQ2y/sm/qPlAVsAt59UEmDbaV7vE1toWItsVRkPiCIKIQ80aeFhMrRJEvdGxFzv8QFhyfok/2k6xWz0nHLjPU/SogBpgBZC8RMeQ=
+FId8qJJfvrX3mTx3ap2+wEdo1+V1zonxvhaYZM51ClJD8+B15LkwhDhMSEZ/sfLZ1i+SunHl8InsVQ31LoLvSw5oJ4w6GcJWlmMD9Ax/iClGxaZEZl4IRmadcz7duGYbv6hllCaxLqdRGHJVwmwkGv1umL13PmUeP2DWmE9wMAY=
 ```
 
 
 # 私钥和公钥的生成
 
 
-可以在demo上尝试一下加密和解密过程，并且可以用后面的方法生辰新的私钥公钥替换一下尝试
+可以在demo上尝试一下加密和解密过程，并且可以用后面的方法生成新的私钥公钥替换一下尝试
+
+
+> 也就是创造你的“保密笔”
 
 
 可是，怎么创建公钥私钥呢？
